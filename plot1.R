@@ -12,8 +12,7 @@ RawData <- read.table("household_power_consumption.txt", header=TRUE, sep=";", n
 dim(RawData)   # 2,075,259 rows x 9 columns
 
           #  subset to only show data between dates 2007-02-01 and 2007-02-02
-fix_date <- mutate(RawData, Date = strptime(RawData$Date, format="%d/%m/%Y", tz=""))
-ExData <- subset(fix_date, Date >= '2007-02-01' & Date <= '2007-02-02')
+ExData <- subset(RawData, RawData$Date == "1/2/2007" | RawData$Date == "2/2/2007")
 
 
 ## CREATE PLOT 1
