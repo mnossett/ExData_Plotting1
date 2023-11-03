@@ -20,6 +20,7 @@ ExData <- RawData %>% mutate(Time = strptime(paste(Date, " " ,Time), "%d/%m/%Y %
 
 
 ##  CREATE PLOT 2
+setwd("C:/Users/rattl/Documents/RStudio_files/datasciencecoursera/ExData_Plotting1")
 png(filename = "./plot2.png")
 plot(ExData$Global_active_power, type="n", xlab="", xaxt = "n",
      ylab= "Gloabal Active Power (kilowatts)")
@@ -30,3 +31,5 @@ dev.off()
 # plot creates the graph area with y-axis and y-axis label
 # axis creates a customized x-axis
 # lines draws the lineplot of the data
+
+# Thank you to Ekkalak Thongthanomkul for the hint about the axis command in the discussion board
